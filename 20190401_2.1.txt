@@ -1,0 +1,27 @@
+
+boolean prev_btn, cur_btn;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(2, INPUT);
+  prev_btn = 0;
+  cur_btn = 0;
+
+}
+
+void loop() {
+  cur_btn = digitalRead(2);
+
+  if(cur_btn != prev_btn){
+    prev_btn = cur_btn;
+
+    if (cur_btn == HIGH){
+      Serial.println("Button is ON...");
+    }else{
+      Serial.println("Button is OFF...");
+    }
+
+    delay(500);
+  }
+
+}

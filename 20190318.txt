@@ -1,0 +1,27 @@
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(7, OUTPUT);  //pinMode(핀번호, 모드)  INPUT/OUTPUT
+  pinMode(6, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(3, OUTPUT);
+}
+
+void loop() {
+  short a[] = {3,4,5,6,7};
+  // put your main code here, to run repeatedly:
+  for(int i = 0;i<5;i++){
+    digitalWrite(7, HIGH);  // digitalWrite(핀번호, 작동여부);   작동: HIGH(5V) / LOW(0V)
+    digitalWrite(5, LOW);
+    digitalWrite(3, LOW);
+    delay(500); //ms단위
+    digitalWrite(7, LOW);
+    digitalWrite(5, HIGH);
+    digitalWrite(3, LOW);
+    delay(500); //ms단위
+    digitalWrite(7, LOW);
+    digitalWrite(5, LOW);
+    digitalWrite(3, HIGH);
+    delay(500);
+  }
+}

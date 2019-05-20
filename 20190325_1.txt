@@ -1,0 +1,16 @@
+#define LED 13
+#define PUSH_BUTTON 2
+
+void setup(){
+  pinMode(LED, OUTPUT);
+  pinMode(PUSH_BUTTON, INPUT);
+}
+
+void loop(){
+  if(digitalRead(PUSH_BUTTON) == HIGH){
+    digitalWrite(LED, HIGH);
+    delay(100);
+    digitalWrite(LED, LOW);  
+  }
+}
+
