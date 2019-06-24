@@ -10,12 +10,7 @@ void setup() {
     pinMode(row[i], OUTPUT);
   }
   Serial.begin(9600);
-  
-/*  for(int i = 0;i<num;i++){
-    digitalWrite(col[i], 0);
-    digitalWrite(row[i], 0);
-  }
-    digitalWrite(A5, 1);*/
+
 }
 
  byte row_arr[8][8] = {
